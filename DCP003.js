@@ -20,11 +20,23 @@
 // every right child has a larger value than its parent
 // every node can contain from 0 to 2 children.
 
-function treeNode(val, left, right) {
-    // this.val = val;
-    // this.left = left;
-    // this.right = right;
-    console.log(val, left, right, this);
+function TreeNode(val, left, right) {
+    this.val = val;
+    this.left = left;
+    this.right = right;
+    // console.log(val, left, right, this);
 }
 
-treeNode(1, 2, 3);
+// @param {TreeNode} root
+// treeNode(1, 2, 3);
+const inorder = (root) => {
+    const nodes = [];
+    if (root) {
+        inorder(root.left);
+        nodes.push(root.val);
+        inorder(root.right);
+    }
+    return nodes;
+    console.log(nodes);
+};
+// inorder(TreeNode);
