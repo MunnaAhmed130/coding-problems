@@ -20,6 +20,7 @@ const fizzBuzz = (ruleset) => {
         if (output == "") {
             output = i;
         }
+
         console.log(output);
     }
 };
